@@ -1,0 +1,30 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(73, 81, 228);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem;
+  }
+  
+  .toolbar-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .toolbar button {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
+  .toolbar button:hover {
+    color: #00c8ff; /* Blue-600 */
+  }
+

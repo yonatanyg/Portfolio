@@ -1,0 +1,31 @@
+.projects-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .projects-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .unity-title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  

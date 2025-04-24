@@ -1,0 +1,149 @@
+/* General styles */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent; /* Adjust background if necessary */
+  }
+  
+  .profile-card {
+    background: transparent;  /* Keep it transparent */
+    border: 2px solid #000000;  /* Add a border around the card */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+
+}
+
+  
+  /* Profile Image */
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4c6ef5; /* Adjust border color if needed */
+  }
+  
+  /* About Me */
+  .about-me {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .bio {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+/* Key Skills */
+.skills {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .skills-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-item {
+    font-size: 1rem;
+    display: inline-block;
+    background-color: #e3f2fd;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin: 5px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    background-color: #4c6ef5; /* Change background color on hover */
+    color: white; /* Change text color when hovered */
+  }
+  
+  /* Hobbies */
+  .hobbies {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .hobbies-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hobbies-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .hobby-item {
+    font-size: 1rem;
+    display: inline-block;
+    background-color: #e3f2fd; /* Same as skills section */
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin: 5px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .hobby-item:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    background-color: #4c6ef5; /* Change background color on hover */
+    color: white; /* Change text color when hovered */
+  }
+  
+  .hobby-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .hobby-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Button */
+  .contact-btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .contact-link {
+    background-color: #4c6ef5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .contact-link:hover {
+    background-color: #3a5ec7;
+  }
+  
