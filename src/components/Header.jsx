@@ -23,6 +23,20 @@ function Header() {
           </button>
         </Link>
       </div>
+
+      {/* GitHub Link with Logo */}
+      <a
+        href="https://github.com/yonatanyg"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="github-link"
+      >
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          alt="GitHub Logo"
+          className="github-logo"
+        />
+      </a>
     </div>
   );
 }

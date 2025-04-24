@@ -1,30 +1,56 @@
+/* Toolbar - Ensure the header is fixed and spans the width */
 .toolbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(73, 81, 228);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-  }
-  
-  .toolbar-buttons {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .toolbar button {
-    background: none;
-    border: none;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  
-  .toolbar button:hover {
-    color: #00c8ff; /* Blue-600 */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(73, 81, 228);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; /* Spread the content */
+  align-items: center;
+  padding-right: 20px; /* Optional: Reduce the padding to avoid too much space */
+}
 
+/* Container for the toolbar buttons */
+.toolbar-buttons {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1; /* Allow buttons to take up space */
+  justify-content: center; /* Center the buttons */
+}
+
+/* Button styles */
+.toolbar button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  color: #00c8ff; /* Blue-600 */
+}
+
+/* Style for GitHub Link */
+.github-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 20px; /* Adjust this margin to control distance from buttons */
+}
+
+.github-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 100px;
+}
+
+.github-link:hover {
+  color: #0077b6;
+}

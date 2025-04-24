@@ -1,6 +1,13 @@
+import React, { useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
     <div className="home-container">
       <div className="profile-card">
@@ -65,10 +72,29 @@ function Home() {
 
         {/* Contact Button */}
         <div className="contact-btn">
-          <a href="#contact" className="contact-link">
+          <a href="#contact" className="contact-link" onClick={togglePopup}>
             Get in Touch
           </a>
         </div>
+
+        {/* Popup */}
+        {showPopup && (
+          <div className="popup">
+            <div className="popup-content">
+              <p>Email: yonatanyg@gmail.com</p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/yonatanyg123/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Linkedin profile
+                </a>
+              </p>
+              <button onClick={togglePopup}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
