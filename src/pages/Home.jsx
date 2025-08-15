@@ -24,12 +24,7 @@ function Home() {
         <div className="text-center about-me">
           <h1 className="name">Hi, I'm Yonatan Green</h1>
           <p className="bio">
-            Hi, I'm Yonatan, a Computer Science student at Hebrew University,
-            graduating this year. I'm passionate about software development,
-            with a special place at heart for game dev. I enjoy tackling
-            challenges and finding creative solutions through programming. As I
-            prepare to graduate, I'm excited to continue growing as a developer
-            and explore new opportunities.
+Hi, I'm Yonatan, a Computer Science graduate from Hebrew University. I'm passionate about software development and enjoy tackling challenges and finding creative solutions through programming. I'm excited to continue growing as a developer and explore new opportunities.np
           </p>
         </div>
 
