@@ -1,31 +1,89 @@
 .projects-container {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .projects-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .projects-text {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .projects-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .unity-title {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+  padding: 100px 2rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.projects-header {
+  margin-bottom: 3rem;
+}
+
+.projects-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.projects-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.section-heading {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #475569;
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.projects-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #2d3748 transparent;
+  margin-bottom: 3rem;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 2px;
+}
+
+.unity-section {
+  margin-top: 1rem;
+}
+
+.itch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #6366f1;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.itch-link:hover {
+  color: #a5b4fc;
+}

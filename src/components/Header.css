@@ -1,56 +1,92 @@
-/* Toolbar - Ensure the header is fixed and spans the width */
 .toolbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(73, 81, 228);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  padding: 1rem;
+  padding: 0 2rem;
+  height: 64px;
   display: flex;
-  justify-content: space-between; /* Spread the content */
+  justify-content: space-between;
   align-items: center;
-  padding-right: 20px; /* Optional: Reduce the padding to avoid too much space */
+  background: rgba(10, 14, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Container for the toolbar buttons */
+.toolbar-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.toolbar-logo span {
+  color: #6366f1;
+}
+
 .toolbar-buttons {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  gap: 1rem;
-  flex-grow: 1; /* Allow buttons to take up space */
-  justify-content: center; /* Center the buttons */
+  gap: 0.25rem;
+  align-items: center;
 }
 
-/* Button styles */
-.toolbar button {
+.toolbar-buttons a {
+  text-decoration: none;
+}
+
+.toolbar-buttons button {
   background: none;
   border: none;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #94a3b8;
   cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.01em;
 }
 
-.toolbar button:hover {
-  color: #00c8ff; /* Blue-600 */
+.toolbar-buttons button:hover {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
 }
 
-/* Style for GitHub Link */
+.toolbar-buttons button.active {
+  color: #e2e8f0;
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .github-link {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.2s ease, background 0.2s ease;
   text-decoration: none;
-  margin-left: 20px; /* Adjust this margin to control distance from buttons */
-}
-
-.github-logo {
-  width: 30px;
-  height: 30px;
-  margin-right: 100px;
 }
 
 .github-link:hover {
-  color: #0077b6;
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.github-logo {
+  width: 18px;
+  height: 18px;
+  filter: invert(1) brightness(0.8);
 }

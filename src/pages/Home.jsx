@@ -4,51 +4,52 @@ import "./Home.css";
 function Home() {
   const [showPopup, setShowPopup] = useState(false);
 
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
-
   return (
     <div className="home-container">
       <div className="profile-card">
-        {/* Profile Image */}
-        <div className="profile-container">
+
+        {/* Hero */}
+        <div className="hero">
           <img
             src="/imgs/profile.png"
             alt="Yonatan Green"
             className="profile-image"
           />
+          <div className="hero-text">
+            <h1 className="name">Yonatan Green</h1>
+            <span className="title-badge">CS Graduate · Developer</span>
+          </div>
         </div>
 
-        {/* About Me */}
-        <div className="text-center about-me">
-          <h1 className="name">Hi, I'm Yonatan Green</h1>
+        <div className="divider" />
+
+        {/* About */}
+        <div className="section">
+          <p className="section-label">About</p>
           <p className="bio">
-Hi, I'm Yonatan, a Computer Science graduate from Hebrew University. I'm passionate about software development and enjoy tackling challenges and finding creative solutions through programming. I'm excited to continue growing as a developer and explore new opportunities.np
+            Computer Science graduate from Hebrew University. Passionate about software
+            development, creative problem-solving, and building things that work elegantly.
+            Always looking to grow as a developer and explore new opportunities.
           </p>
         </div>
 
-        {/* Key Skills */}
-        <div className="skills">
-          <h2 className="skills-title">Key Skills</h2>
+        <div className="divider" />
+
+        {/* Skills */}
+        <div className="section">
+          <p className="section-label">Skills</p>
           <ul className="skills-list">
-            <li className="skill-item">Java</li>
-            <li className="skill-item">SQL</li>
-            <li className="skill-item">C#</li>
-            <li className="skill-item">C/C++</li>
-            <li className="skill-item">Unity</li>
-            <li className="skill-item">Git</li>
-            <li className="skill-item">HTML</li>
-            <li className="skill-item">JavaScript</li>
-            <li className="skill-item">CSS</li>
-            <li className="skill-item">Game Development</li>
-            <li className="skill-item">Problem Solving</li>
+            {["Java", "C#", "C/C++", "JavaScript", "HTML", "CSS", "SQL", "Unity", "Git", "Game Development"].map(s => (
+              <li className="skill-item" key={s}>{s}</li>
+            ))}
           </ul>
         </div>
 
+        <div className="divider" />
+
         {/* Hobbies */}
-        <div className="hobbies">
-          <h2 className="hobbies-title">Hobbies</h2>
+        <div className="section">
+          <p className="section-label">Interests</p>
           <ul className="hobbies-list">
             <li className="hobby-item">
               <a
@@ -57,7 +58,7 @@ Hi, I'm Yonatan, a Computer Science graduate from Hebrew University. I'm passion
                 rel="noopener noreferrer"
                 className="hobby-link"
               >
-                Cinema
+                Cinema ↗
               </a>
             </li>
             <li className="hobby-item">Music</li>
@@ -65,32 +66,41 @@ Hi, I'm Yonatan, a Computer Science graduate from Hebrew University. I'm passion
           </ul>
         </div>
 
-        {/* Contact Button */}
+        <div className="divider" />
+
+        {/* Contact */}
         <div className="contact-btn">
-          <a href="#contact" className="contact-link" onClick={togglePopup}>
-            Get in Touch
+          <a
+            href="#contact"
+            className="contact-link"
+            onClick={(e) => { e.preventDefault(); setShowPopup(true); }}
+          >
+            Get in Touch →
           </a>
         </div>
-
-        {/* Popup */}
-        {showPopup && (
-          <div className="popup">
-            <div className="popup-content">
-              <p>Email: yonatanyg@gmail.com</p>
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/yonatanyg123/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Linkedin profile
-                </a>
-              </p>
-              <button onClick={togglePopup}>Close</button>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="popup" onClick={() => setShowPopup(false)}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <p className="popup-title">Let's connect</p>
+            <p className="popup-text">📧 yonatanyg@gmail.com</p>
+            <p className="popup-text">
+              <a
+                href="https://www.linkedin.com/in/yonatanyg123/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+            </p>
+            <button className="popup-close-btn" onClick={() => setShowPopup(false)}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
